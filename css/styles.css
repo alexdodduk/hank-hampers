@@ -105,3 +105,10 @@ button:hover {
 .slick-next:before {
     content: ">";
 }
+
+/*iPhone 6 plus size and below*/
+@media(max-device-width: 414px) {
+    a, button {
+        font-size: 2em;
+    }
+}

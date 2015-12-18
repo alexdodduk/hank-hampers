@@ -1,8 +1,8 @@
-(function () {
+$(document).ready(function () {
     var windowHeight = window.innerHeight,
         windowWidth = window.innerWidth,
         title = $('h1'),
-        maxWidth = 400;
+        maxWidth = 750;
     
     resizeTitle();
     repositionTitle();
@@ -40,4 +40,4 @@
         
         background.attr('style', 'background-image: ' + image + '; width: ' + windowWidth + 'px; height: ' + windowHeight + 'px;')
     }
-}());
+});
