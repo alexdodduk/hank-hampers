@@ -73,8 +73,13 @@ a:hover, a:focus, button:hover, button:focus {
 }
 
 #hide {
-    float: right;
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
     margin: 10px;
+    border-radius: 3px;
+    background: rgba(123, 123, 123, 0.701961);
 }
 
 button {
@@ -106,9 +111,49 @@ button:hover {
     content: ">";
 }
 
+.slick-dots li button:before {
+    color: floralwhite;
+}
+
+.slick-dots li.slick-active button:before {
+    color: floralwhite;
+}
+
+@media(max-device-width: 768px) {
+    a, button {
+        display: block;
+        font-size: 2em;
+    }
+    
+    button {
+        margin: auto;
+        margin-top: 1em;
+    }
+    
+    #gallery {
+        margin-bottom: 0;
+    }
+    
+    .slick-dots {
+        display: none !important;
+    }
+}
+
 /*iPhone 6 plus size and below*/
 @media(max-device-width: 414px) {
     a, button {
-        font-size: 2em;
+        display: block;
+        font-size: 4em;
+        margin: 1em auto;
+    }
+    
+    
+    
+    #gallery {
+        margin-bottom: 5%;
+    }
+    
+    .slick-dots {
+        display: block;
     }
 }

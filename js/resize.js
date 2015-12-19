@@ -2,36 +2,44 @@ $(document).ready(function () {
     var windowHeight = window.innerHeight,
         windowWidth = window.innerWidth,
         title = $('h1'),
+        gallery = $('#gallery'),
         maxWidth = 750;
     
-    resizeTitle();
-    repositionTitle();
+    resize(title);
+    reposition(title);
+    
+    resize(gallery);
+    reposition(gallery);
     
     $(window).resize(function () {
         windowHeight = window.innerHeight,
         windowWidth = window.innerWidth;
         
-        resizeTitle();
-        repositionTitle();
+        resize(title);
+        reposition(title);
+    
+        resize(gallery);
+        reposition(gallery);
+        
         setBackgroundSize();
     });
     
-    function resizeTitle() {
-        var elementWidth = title.width(),
-            elementHeight = title.height();
+    function resize(element) {
+        var elementWidth = element.width(),
+            elementHeight = element.height();
         
         while (elementWidth < Math.min(windowWidth, maxWidth)) {
             elementHeight++;
-            title.attr('style', 'font-size: ' + elementHeight + 'px; line-height: ' + elementHeight + 'px;');
+            element.attr('style', 'font-size: ' + elementHeight + 'px; line-height: ' + elementHeight + 'px;');
             elementWidth = title.width();
         }
     }
     
-    function repositionTitle () {
-        var titleHeight = title.height(),
-        margin = (windowHeight / 2) - (titleHeight / 2);
+    function reposition (element) {
+        var height = element.height(),
+        margin = (windowHeight / 2) - (height / 2);
         
-        title.attr('style', 'margin-top:' + margin + 'px; font-size: ' + titleHeight + 'px; line-height: ' + titleHeight + 'px;');
+        element.attr('style', 'margin-top:' + margin + 'px; font-size: ' + height + 'px; line-height: ' + height + 'px;');
     }
     
     function setBackgroundSize() {
