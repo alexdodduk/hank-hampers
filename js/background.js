@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
     
     // choose an image at random
-    image.src = 'images/' + Math.ceil(Math.random() * 6) + '.jpg';
+    image.src = 'images/' + Math.ceil(Math.random() * 6) + '-min.jpg';
     
     function show(element) {
         element.fadeIn(6000);
