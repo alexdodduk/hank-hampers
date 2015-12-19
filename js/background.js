@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     var background = $('#background'),
         windowWidth = window.innerWidth,
         windowHeight = window.innerHeight,
@@ -15,4 +15,4 @@ $(document).ready(function () {
     function show(element) {
         element.fadeIn(6000);
     }
-});
+})();
